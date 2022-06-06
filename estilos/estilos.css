@@ -1,0 +1,577 @@
+/* sintexis */
+
+/*selector{
+    propiedad:valor
+}*/
+
+/* un selector puede ser una etiqueta, una clase o un ID */
+
+
+/* RESET: sacar los margenes y rellenos de un archivo */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+
+
+*{box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+#body{
+    width: 100%;
+    height: 100%;
+    display:grid;
+    background-color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr auto;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+
+
+
+
+#header{
+    background-color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-area: "header";
+    height: 5vh;
+    width: 100%;
+}
+
+#botoneraHeader{
+    color: black;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    list-style: none;
+}
+
+header nav{
+    color:rgb(0, 0, 0);
+    background-color:whitesmoke;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+video{
+    width: 100%;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding: 10px 5px;
+}
+
+
+header a{
+    cursor: pointer;
+    font-size:x-large;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    gap: 40px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+   
+}
+
+
+#main{
+    grid-area: "main";
+    width: 100%;
+    background-color: blue;
+}
+
+#categorias{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows:  1fr 1fr;
+   grid-template-areas: "bg1 bg2 bg3 bg4"
+                        "bg5 bg6 bg7 bg8" ;
+   gap: 10px;
+}
+
+#categorias img{
+    width: 100%;
+    height: 90%;
+    box-shadow: 0px 0px 10px coral;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+#footer{
+    padding:12px;
+    margin: 0;
+    color:rgb(100, 100, 100);
+    grid-area: "footer";
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 90vh;
+    color: whitesmoke;
+    background-image:linear-gradient(0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+    url(../img/Cama\ ratan\ centrada.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    }
+
+#hero h2{
+    color: white;
+    font-weight: lighter;
+    padding-bottom: 30px;
+}
+
+
+
+
+
+#OfertasImperdibles{
+    background-color:whitesmoke;
+    color: black;
+    padding-top: 50px;
+    align-items: center;
+    height: auto;
+    width: 100%;
+
+}
+
+
+
+
+#OfertasImperdibles h1{ 
+    padding-bottom: 40px;
+    text-align:start;
+    font-size: 1.8em;
+    font-weight:lighter;
+
+}
+
+#OfertasImperdibles h3{
+    font-weight: lighter;
+    text-align: start;
+    margin-top: 5px;
+}
+
+
+#OfertasImperdibles .imagenesOfertas{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+
+
+
+
+
+
+
+
+.MueblesSostenidos{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.MueblesSostenidos h2{
+    font-weight: lighter;
+    font-size:large;
+}
+.MueblesSostenidos h1{
+    padding-top:15px;
+    font-weight: lighter;
+    font-size:x-large;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#nuestras-colecciones{
+    background-color: whitesmoke;
+    color: white;
+    text-align: center;
+    
+}
+
+
+#nuestras-colecciones .container{
+    padding: 50px 50px;
+   
+}
+
+
+#nuestras-colecciones h2{
+    margin-top: 0px;
+    color: black;
+    margin-bottom: 15px;
+    font-weight: lighter;
+}
+
+#nuestras-colecciones h3{
+    margin-top: 12px;
+    font-weight: lighter;
+    font-size:xx-large;
+}
+
+
+#nuestras-colecciones button{
+    margin-top: 350px;
+    font-weight: lighter;
+    font-size:large;
+}
+
+#nuestras-colecciones .carta{
+    height: 500px;
+    padding:20px 20px;
+    margin: 20px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.carta:first-child{
+    background-image:linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+    ),
+url(../img/comedor.jpg);
+
+}
+
+.carta:nth-child(2){ background-image:linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+    ),
+url(../img/dormitorio.jfif)
+    
+}
+
+.carta:nth-child(3){ background-image:linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+    ),
+url(../img/jardin.jpg)
+    
+}
+
+
+
+#nuestras-colecciones .ventajas{
+    text-align: center;
+    display: flex;
+    text-align: start;
+    padding: 200px 500px;
+
+
+}
+
+#nuestras-colecciones li{ 
+    margin: 20px 0px;
+    font-weight: lighter;
+    font-size:xx-large;
+    color: black;
+}
+
+
+
+
+
+
+#razon{
+    font-size:2.3em;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    color: black;
+    background-color: whitesmoke;
+   
+}
+
+
+
+#razon .container{
+    height: 800px;
+    gap: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+}
+
+#razon img{
+    width: auto;
+    height: 800px;
+}
+
+
+
+
+
+
+
+
+
+#medioAmbiente {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image:linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+    ),
+url(../img/economiser-les-ressources.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#medioAmbiente h1{
+    text-align: center;
+    font-weight:lighter;
+    color: white;
+}
+
+#medioAmbiente button{
+    margin-top: 40px;
+    font-weight: lighter;
+    font-size:large;
+
+}
+
+
+
+
+
+
+
+
+
+h1{font-size: 3em;}
+h2{font-size: 2.4em;}
+h3{font: size 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+
+
+button{ 
+    font-size: 1em;
+    font-weight: lighter;
+    padding: 10px 30px;
+    border: 1px solid black;
+    box-shadow:  2px 2px 10px black;
+    color: rgb(255, 255, 255);
+    background-color:transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+button:hover{
+    background-color: rgb(208, 222, 233);
+}
+
+
+
+.titulocategoria{
+    color:black;
+    font-weight:normal ;
+    font-size:xx-large;
+}
+.descripcioncategoria{
+    color: black;
+    font-weight: lighter;
+    font-size: medium;
+}
+
+.TextoBlanco{
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (max-width: 1375px){
+    
+}
+
+@media screen and (max-width: 950px){
+    #botoneraHeader{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    
+    .logo{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        align-content: start;
+        margin: 0;
+        padding: 10px 5px;
+    }
+
+    }
+    #categorias {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "bg1 bg2 bg3"
+                             "bg4 bg5 bg6"
+                             "bg7 bg8 bg9";
+    }
+
+}
+
+@media screen and (max-width: 730px){
+    #categorias{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "bg1 bg2"
+                             "bg3 bg4"
+                             "bg5 bg6"
+                             "bg7 bg8";
+    }  
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    #botoneraHeader{
+        visibility: hidden;
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+     #categorias{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "bg1"
+                             "bg2"
+                             "bg3"
+                             "bg4"
+                             "bg5"
+                             "bg6"
+                             "bg7"
+                             "bg8";
+    }
+
+}
+
+
+/*Margin + 1 única unidad de medida: esa unidad de medida se aplica en todos
+margin top y botom + unidad de medida: se aplica sollo en esos lados
+margin top: uso una unica unidad de medida solo en el lado indicado
+
+
+position:
+absolt se superpone con todo
+position relative desaplazarse en relación asi mismo
+postiion fixed: queda en su lugar anclado cuando scroleas
+
+/*unidades de medidas:
+ABSOLUTAS: MEDIDAS QUE NO SE ADAPTAN: PX, CM;
+RELATIVAS: MEDIDAS QUE SI SE ADAPTAN: %, rem, em
+REM: TOMA COMO REFERENCIA LA MEDIDA DEL HTML. 1REM=16px
+2REM: 32PX
+EM=24PX
+2EM= 48PX 
+
+ 
