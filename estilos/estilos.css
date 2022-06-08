@@ -229,7 +229,20 @@ header a{
 }
 
 
+.img:hover{
+    animation: ofertas 2s;
+}
 
+@keyframes ofertas {
+    0% {
+        transform:scale(1.5);
+     
+    }
+
+
+    
+
+}
 
 
 
@@ -363,8 +376,17 @@ url(../img/jardin.jpg)
 
 
 
+.Ventajas{
+    transition: all 2s ease-in-out;
 
 
+}
+
+.Ventajas:hover{
+   transform:translateX(300px) ;
+
+
+}
 
 #razon{
     font-size:2.3em;
