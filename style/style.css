@@ -17,62 +17,40 @@ html {
 body {
   text-align: center;
   font-weight: lighter;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   background-color: whitesmoke;
 }
 
-.presentacion {
+section .presentacion {
   padding: 40px 20px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto;
+  max-width: 700px;
 }
-.presentacion h1 {
+section .presentacion h1 {
   padding-bottom: 20px;
   font-weight: normal;
 }
-.presentacion p {
+section .presentacion p {
   font-weight: light;
-  max-width: 700px;
-  margin: auto;
-}
-
-.padre {
-  margin-top: 0.5em;
-  background-color: whitesmoke;
-  display: grid;
-  grid-template-areas: "img1 img2" "img3 img4" "img5 img6";
-}
-.padre img {
-  filter: brightness(80%);
-  padding: 5px;
-  width: 250px;
-  height: 300px;
-  margin-top: 15px;
-}
-.padre .texto-encima {
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.recomendados {
-  padding: 50px 20px;
-}
-.recomendados h2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-bottom: 10px;
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1 {
@@ -95,17 +73,66 @@ nav ul li {
 
 /*Declarar las areas*/
 /*acomodar las areas*/
+.padre {
+  margin-top: 0.5em;
+  background-color: whitesmoke;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "img1 img2" "img3 img4" "img5 img6";
+}
+
+.bajo-brillo {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
 .img1, .img2, .img3, .img4, .img5, .img6 {
   position: relative;
   display: inline-block;
   text-align: center;
 }
 
+.texto-encima {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.padre img {
+  padding: 5px;
+  width: 250px;
+  height: 300px;
+  margin-top: 15px;
+}
+
+.recomendados {
+  padding: 50px 20px;
+}
+
+.recomendados h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 10px;
+}
+
 .compromisos {
+  display: -ms-grid;
   display: grid;
   margin: 2em;
+  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  grid-template-areas: "h1" "p" "ul";
+      grid-template-areas: "h1" "p" "ul";
 }
 
 .compromisos ul {
@@ -134,13 +161,18 @@ nav ul li {
 
   .padre {
     margin: 0;
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "img1 img2 img3" "img4 img5 img6";
+        grid-template-areas: "img1 img2 img3" "img4 img5 img6";
   }
 
   nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media (min-width: 1023px) {
@@ -156,25 +188,39 @@ nav ul li {
 
   .padre {
     margin: 0;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "img1 img2 img3 img4" "img5 img6 ";
+        grid-template-areas: "img1 img2 img3 img4" "img5 img6 ";
   }
 
   .compromisos {
     list-style: none;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "container1" "container2" "container1" "container2";
+        grid-template-areas: "container1" "container2" "container1" "container2";
   }
 }
 #hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   height: 90vh;
   color: whitesmoke;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/Cama\ ratan\ centrada.jfif);
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Cama\ ratan\ centrada.jfif);
   background-repeat: no-repeat;
   background-size: cover;
@@ -191,7 +237,9 @@ nav ul li {
   background-color: whitesmoke;
   color: black;
   padding-top: 50px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: auto;
   width: 100%;
 }
@@ -210,8 +258,12 @@ nav ul li {
 }
 
 #OfertasImperdibles .imagenesOfertas {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 40px;
 }
 
@@ -222,22 +274,33 @@ nav ul li {
 
 @-webkit-keyframes ofertas {
   0% {
-    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
 @keyframes ofertas {
   0% {
-    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 .MueblesSostenidos {
   padding-top: 150px;
   padding-bottom: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
@@ -291,19 +354,24 @@ nav ul li {
 }
 
 .carta:first-child {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/comedor.jpg);
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/comedor.jpg);
 }
 
 .carta:nth-child(2) {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/dormitorio.jfif);
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/dormitorio.jfif);
 }
 
 .carta:nth-child(3) {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/jardin.jpg);
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/jardin.jpg);
 }
 
 #nuestras-colecciones .ventajas {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: start;
   padding: 200px 500px;
@@ -317,11 +385,13 @@ nav ul li {
 }
 
 .Ventajas {
+  -webkit-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
 }
 
 .Ventajas:hover {
-  transform: translateX(300px);
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
 }
 
 #razon {
@@ -336,8 +406,12 @@ nav ul li {
   height: 800px;
   gap: 100px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #razon img {
@@ -347,11 +421,21 @@ nav ul li {
 
 #medioAmbiente {
   height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/economiser-les-ressources.jpeg);
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/economiser-les-ressources.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -375,7 +459,8 @@ button {
   font-weight: lighter;
   padding: 10px 30px;
   border: 1px solid black;
-  box-shadow: 2px 2px 10px black;
+  -webkit-box-shadow: 2px 2px 10px black;
+          box-shadow: 2px 2px 10px black;
   color: rgb(255, 255, 255);
   background-color: transparent;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -383,4 +468,4 @@ button {
 
 button:hover {
   background-color: rgb(208, 222, 233);
-}/*# sourceMappingURL=style.css.map */
+}
