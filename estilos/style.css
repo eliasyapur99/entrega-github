@@ -1,9 +1,3 @@
-/* sintexis */
-/*selector{
-    propiedad:valor
-}*/
-/* un selector puede ser una etiqueta, una clase o un ID */
-/* RESET: sacar los margenes y rellenos de un archivo */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 * {
   padding: 0;
@@ -21,6 +15,25 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: whitesmoke;
+}
+
+footer {
+  padding: 100px;
+}
+
+button {
+  font-size: 1em;
+  font-weight: lighter;
+  padding: 10px 30px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 10px black;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+button:hover {
+  background-color: rgb(208, 222, 233);
 }
 
 .presentacion {
@@ -60,6 +73,24 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media (min-width: 768px) {
+  .padre {
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "img1 img2 img3" "img4 img5 img6";
+  }
+  .padre img {
+    width: 300px;
+    height: 400px;
+  }
+}
+@media (min-width: 1023px) {
+  .padre {
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "img1 img2 img3 img4" "img5 img6 ";
+  }
+}
 
 .recomendados {
   padding: 50px 20px;
@@ -67,8 +98,268 @@ body {
 .recomendados h2 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding-bottom: 10px;
+}
+
+.compromisos {
+  background-color: rgb(227, 227, 227);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "h1" "p" "ul" "a";
+}
+.compromisos ul {
+  list-style: none;
+  font-size: x-large;
+  padding-bottom: 50px;
+}
+.compromisos h1 {
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.compromisos p {
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-bottom: 50px;
+}
+.compromisos a {
+  text-align: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bolder;
+}
+@media (min-width: 1023px) {
+  .compromisos {
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "h1" "ul" "p" "a";
+  }
+}
+
+.hero-sostenible {
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/economiser-les-ressources.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.hero-sostenible h1 {
+  color: white;
+}
+
+#texto-grande {
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+.maderas-macizas {
+  display: grid;
+  margin: 2em;
+  grid-template-columns: 1fr;
+  grid-template-areas: "h1" "p" "img";
+}
+.maderas-macizas .imagen-arriba img {
+  width: 100%;
+  max-width: 100%;
+  height: 80vh;
+}
+@media (min-width: 1023px) {
+  .maderas-macizas {
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "h1" "img" "p" "img";
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 90vh;
+  color: whitesmoke;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Cama\ ratan\ centrada.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.hero h2 {
+  color: white;
+  font-weight: lighter;
+  padding-bottom: 30px;
+}
+
+.OfertasImperdibles {
+  padding: 50px;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+.OfertasImperdibles h1 {
+  padding-bottom: 40px;
+  text-align: center;
+  font-weight: light;
+}
+.OfertasImperdibles h3 {
+  font-weight: lighter;
+  text-align: center;
+}
+.OfertasImperdibles .imagenesOfertas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  /*HACER DOS FILAS CON FLEX BOX
+          @media(min-width:768px) {
+
+
+          }
+
+
+  */
+}
+.OfertasImperdibles .imagenesOfertas .img:hover {
+  -webkit-animation: ofertas 2s;
+          animation: ofertas 2s;
+}
+@-webkit-keyframes ofertas {
+  0% {
+    transform: scale(1.5);
+  }
+}
+@keyframes ofertas {
+  0% {
+    transform: scale(1.5);
+  }
+}
+@media (min-width: 1023px) {
+  .OfertasImperdibles .imagenesOfertas {
+    flex-direction: row;
+  }
+}
+
+#nuestras-colecciones {
+  background-color: whitesmoke;
+  color: white;
+  text-align: center;
+}
+#nuestras-colecciones .container {
+  padding: 50px 50px;
+}
+#nuestras-colecciones .carta {
+  height: 500px;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#nuestras-colecciones .carta a {
+  text-decoration: none;
+}
+#nuestras-colecciones .carta a h3 {
+  margin-top: 12px;
+  color: white;
+  font-weight: lighter;
+  font-size: xx-large;
+}
+#nuestras-colecciones .carta a button {
+  margin-top: 350px;
+  font-weight: lighter;
+  font-size: large;
+}
+#nuestras-colecciones .carta:first-child {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/comedor.jpg);
+}
+#nuestras-colecciones .carta:nth-child(2) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/dormitorio.jfif);
+}
+#nuestras-colecciones .carta:nth-child(3) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/jardin.jpg);
+}
+
+.ventajas {
+  padding-top: 100px;
+  transition: all 2s ease-in-out;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ventajas li {
+  list-style: none;
+  font-weight: lighter;
+  font-size: large;
+}
+.ventajas:hover {
+  transform: scale(1.5);
+}
+
+.razon {
+  font-size: 2em;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.razon .container {
+  gap: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 1023px) {
+  .razon .container {
+    flex-direction: row;
+  }
+}
+.razon img {
+  width: auto;
+  height: 800px;
+}
+
+.medioAmbiente {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/economiser-les-ressources.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.medioAmbiente .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.medioAmbiente .container h1 {
+  text-align: center;
+  font-weight: lighter;
+  color: white;
+}
+.medioAmbiente .container button {
+  margin-top: 40px;
+  font-weight: lighter;
+  font-size: large;
+}
+
+#video {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 * {
@@ -93,32 +384,10 @@ nav ul li {
   text-decoration: none;
 }
 
-/*Declarar las areas*/
-/*acomodar las areas*/
 .img1, .img2, .img3, .img4, .img5, .img6 {
   position: relative;
   display: inline-block;
   text-align: center;
-}
-
-.compromisos {
-  display: grid;
-  margin: 2em;
-  grid-template-columns: 1fr;
-  grid-template-areas: "h1" "p" "ul";
-}
-
-.compromisos ul {
-  list-style: none;
-  font-size: x-large;
-}
-
-.compromisos h1 {
-  padding-bottom: 25px;
-}
-
-.compromisos p {
-  padding-bottom: 50px;
 }
 
 @media (min-width: 768px) {
@@ -126,261 +395,10 @@ nav ul li {
     width: auto;
     height: auto;
   }
-
-  img {
-    width: 300px;
-    height: 400px;
-  }
-
-  .padre {
-    margin: 0;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "img1 img2 img3" "img4 img5 img6";
-  }
-
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 @media (min-width: 1023px) {
   .logo {
     width: auto;
     height: auto;
   }
-
-  img {
-    width: 475px;
-    height: 500px;
-  }
-
-  .padre {
-    margin: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "img1 img2 img3 img4" "img5 img6 ";
-  }
-
-  .compromisos {
-    list-style: none;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "container1" "container2" "container1" "container2";
-  }
-}
-#hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  height: 90vh;
-  color: whitesmoke;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Cama\ ratan\ centrada.jfif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-#hero h2 {
-  color: white;
-  font-weight: lighter;
-  padding-bottom: 30px;
-}
-
-#OfertasImperdibles {
-  background-color: whitesmoke;
-  color: black;
-  padding-top: 50px;
-  align-items: center;
-  height: auto;
-  width: 100%;
-}
-
-#OfertasImperdibles h1 {
-  padding-bottom: 40px;
-  text-align: start;
-  font-size: 1.8em;
-  font-weight: lighter;
-}
-
-#OfertasImperdibles h3 {
-  font-weight: lighter;
-  text-align: start;
-  margin-top: 5px;
-}
-
-#OfertasImperdibles .imagenesOfertas {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.img:hover {
-  -webkit-animation: ofertas 2s;
-          animation: ofertas 2s;
-}
-
-@-webkit-keyframes ofertas {
-  0% {
-    transform: scale(1.5);
-  }
-}
-
-@keyframes ofertas {
-  0% {
-    transform: scale(1.5);
-  }
-}
-.MueblesSostenidos {
-  padding-top: 150px;
-  padding-bottom: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.MueblesSostenidos h2 {
-  font-weight: lighter;
-  font-size: large;
-}
-
-.MueblesSostenidos h1 {
-  padding-top: 15px;
-  font-weight: lighter;
-  font-size: x-large;
-}
-
-#nuestras-colecciones {
-  background-color: whitesmoke;
-  color: white;
-  text-align: center;
-}
-
-#nuestras-colecciones .container {
-  padding: 50px 50px;
-}
-
-#nuestras-colecciones h2 {
-  margin-top: 0px;
-  color: black;
-  margin-bottom: 15px;
-  font-weight: lighter;
-}
-
-#nuestras-colecciones h3 {
-  margin-top: 12px;
-  font-weight: lighter;
-  font-size: xx-large;
-}
-
-#nuestras-colecciones button {
-  margin-top: 350px;
-  font-weight: lighter;
-  font-size: large;
-}
-
-#nuestras-colecciones .carta {
-  height: 500px;
-  padding: 20px 20px;
-  margin: 20px 20px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.carta:first-child {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/comedor.jpg);
-}
-
-.carta:nth-child(2) {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/dormitorio.jfif);
-}
-
-.carta:nth-child(3) {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/jardin.jpg);
-}
-
-#nuestras-colecciones .ventajas {
-  text-align: center;
-  display: flex;
-  text-align: start;
-  padding: 200px 500px;
-}
-
-#nuestras-colecciones li {
-  margin: 20px 0px;
-  font-weight: lighter;
-  font-size: xx-large;
-  color: black;
-}
-
-.Ventajas {
-  transition: all 2s ease-in-out;
-}
-
-.Ventajas:hover {
-  transform: translateX(300px);
-}
-
-#razon {
-  font-size: 2.3em;
-  padding-top: 100px;
-  padding-bottom: 150px;
-  color: black;
-  background-color: whitesmoke;
-}
-
-#razon .container {
-  height: 800px;
-  gap: 100px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-
-#razon img {
-  width: auto;
-  height: 800px;
-}
-
-#medioAmbiente {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/economiser-les-ressources.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-#medioAmbiente h1 {
-  text-align: center;
-  font-weight: lighter;
-  color: white;
-}
-
-#medioAmbiente button {
-  margin-top: 40px;
-  font-weight: lighter;
-  font-size: large;
-}
-
-button {
-  font-size: 1em;
-  font-weight: lighter;
-  padding: 10px 30px;
-  border: 1px solid black;
-  box-shadow: 2px 2px 10px black;
-  color: rgb(255, 255, 255);
-  background-color: transparent;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-button:hover {
-  background-color: rgb(208, 222, 233);
 }/*# sourceMappingURL=style.css.map */

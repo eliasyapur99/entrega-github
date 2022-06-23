@@ -1,15 +1,15 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
 
-html{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-body{
+
+body {
     text-align: center;
     font-weight: lighter;
     display: flex;
@@ -18,61 +18,460 @@ body{
     background-color: whitesmoke;
 
 }
+footer{
+    padding: 100px;
+}
 
-.presentacion{  
-        padding: 40px 20px;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        margin: auto;
-        
-        h1{
-            padding-bottom: 20px;
-            font-weight:normal;
-        }
-        p{
-            font-weight:light;
-            max-width: 700px;
-            margin: auto;
 
-            
+button{ 
+    font-size: 1em;
+    font-weight: lighter;
+    padding: 10px 30px;
+    border: 1px solid black;
+    box-shadow:  2px 2px 10px black;
+    color: rgb(255, 255, 255);
+    background-color:transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-        }
+}
+
+button:hover{
+    background-color: rgb(208, 222, 233);
+}
+
+.presentacion {
+    padding: 40px 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+
+    h1 {
+        padding-bottom: 20px;
+        font-weight: normal;
     }
 
-    .padre{
-        margin-top: 0.5em;
-        background-color: whitesmoke;
-        display: grid;
-        grid-template-areas: 
+    p {
+        font-weight: light;
+        max-width: 700px;
+        margin: auto;
+    }
+
+}
+
+.padre {
+    margin-top: 0.5em;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-areas:
         "img1 img2"
         "img3 img4"
         "img5 img6";
+
+    img {
+        filter: brightness(80%);
+        padding: 5px;
+        width: 250px;
+        height: 300px;
+        margin-top: 15px;
         
+    }
+
+    .texto-encima {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    @media(min-width:768px) {
+        margin: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "img1 img2 img3"
+            "img4 img5 img6";
+            
+            img{
+                width: 300px;
+                height: 400px;
+            }
+    }
+
+    @media(min-width:1023px) {
+        margin: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "img1 img2 img3 img4"
+            "img5 img6 ";
+
+            
+    }
+}
+
+.recomendados {
+    padding: 50px 20px;
+
+    h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+}
+
+.compromisos {
+    background-color: $background-principal ;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "h1"
+        "p"
+        "ul"
+        "a";
+
+    ul {
+        list-style: none;
+        font-size: x-large;
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        margin-left: 2em;
+        margin-right: 2em;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    p {
+        margin-left: 2em;
+        margin-right: 2em;
+        padding-bottom: 50px;
+
+    }
+
+    a {
+        text-align: center;
+        align-items: center;
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    @media(min-width:1023px) {
+
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "h1""ul"
+            "p""a";
+    }
+}
+
+.hero-sostenible{
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-image:linear-gradient(0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+    url(../img/economiser-les-ressources.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    h1{
+        color: $color-fuente-secundaria;
+    }
+}
+
+#texto-grande{
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.maderas-macizas{
+    .imagen-arriba{
+         
+
         img{
-            filter: brightness(80%);
-            padding: 5px;
-            width: 250px;
-            height: 300px;
-            margin-top: 15px;
+        width: 100%;
+        max-width: 100%;    
+        height: 80vh;
         }
+        
+    }
 
-        .texto-encima{
-            color: rgb(255, 255, 255);
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%)
-        }
+    display: grid;
+    margin: 2em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "h1"
+        "p"
+        "img";
+
+
+        @media(min-width:1023px) {
+
+            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "h1""img"
+                "p""img";
+        }       
+}
+
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 90vh;
+    color: whitesmoke;
+    background-image:linear-gradient(0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+    url(../img/Cama\ ratan\ centrada.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    h2{
+        color: white;
+        font-weight: lighter;
+        padding-bottom: 30px;
 
     }
 
-    .recomendados{
-        padding: 50px 20px;
-        h2{
-            display: flex;
-            flex-direction: column;
-            align-items:flex-start;
-            padding-bottom: 10px;
-        }
+}
+   
+.OfertasImperdibles{
+    padding: 50px; 
+    align-items: center;
+    height: auto;
+    width: 100%;
+
+    h1{ 
+        padding-bottom: 40px;
+        text-align:center;
+        font-weight:light;
+    
     }
+
+    h3{
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    .imagenesOfertas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        
+    
+        .img:hover{
+            animation: ofertas 2s;
+        }
+        
+        @keyframes ofertas {
+            0% {
+                transform:scale(1.5);
+             
+            }
+        
+        }
+
+        @media(min-width:1023px) {
+
+            flex-direction: row;
+            
+        }       
+/*HACER DOS FILAS CON FLEX BOX
+        @media(min-width:768px) {
+            
+          
+        }
+
+
+*/
+
+    }
+
+}
+    
+#nuestras-colecciones{
+    background-color: whitesmoke;
+    color: white;
+    text-align: center;
+    
+
+    .container{
+        padding: 50px 50px;
+       
+    }
+
+
+    .carta{
+        height: 500px;
+        padding:20px 20px;
+        margin: 20px 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    
+        a{
+            text-decoration: none;
+            h3{
+                margin-top: 12px;
+                color: white;
+                font-weight: lighter;
+                font-size:xx-large;
+            }
+            button{
+                margin-top: 350px;
+                font-weight: lighter;
+                font-size:large;
+            }
+        }
+
+
+    }
+
+
+    .carta:first-child{
+        background-image:linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),
+    url(../img/comedor.jpg);
+    
+    }
+    
+    .carta:nth-child(2){ background-image:linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),
+    url(../img/dormitorio.jfif)
+        
+    }
+    
+    .carta:nth-child(3){ background-image:linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),
+    url(../img/jardin.jpg)
+
+    }
+}
+
+.ventajas{
+    padding-top: 100px;
+    transition: all 2s ease-in-out;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    li{ 
+        list-style: none;
+        font-weight: lighter;
+        font-size:large;
+      
+    }
+    &:hover{
+        transform:scale(1.5) ;
+
+    }
+    
+}
+
+
+.razon{
+
+    font-size:2em;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+
+    .container{
+    gap: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media(min-width:1023px) {
+
+        flex-direction: row;
+        
+    }       
+
+    }
+
+    img{
+        width: auto;
+        height: 800px;
+    }
+
+
+}
+
+
+
+.medioAmbiente {
+
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    background-image:linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+    ),
+url(../img/economiser-les-ressources.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        h1{
+            text-align: center;
+            font-weight:lighter;
+            color: white;
+        }
+        button{
+            margin-top: 40px;
+            font-weight: lighter;
+            font-size:large;
+        
+        }
+        
+    
+    }
+    
+}
+
+
+#video{
+   width: 100%;
+   padding-top: 100px;
+   padding-bottom: 50px;
+}
