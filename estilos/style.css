@@ -54,10 +54,11 @@ button:hover {
 }
 
 .padre {
+  padding: 30px;
   margin-top: 0.5em;
   background-color: whitesmoke;
   display: grid;
-  grid-template-areas: "img1 img2" "img3 img4" "img5 img6";
+  grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6";
 }
 .padre img {
   filter: brightness(80%);
@@ -66,6 +67,9 @@ button:hover {
   height: 300px;
   margin-top: 15px;
 }
+.padre img:hover {
+  filter: brightness(60%);
+}
 .padre .texto-encima {
   color: rgb(255, 255, 255);
   position: absolute;
@@ -73,7 +77,18 @@ button:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media (min-width: 768px) {
+@media (min-width: 720px) {
+  .padre {
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6";
+  }
+  .padre img {
+    width: 300px;
+    height: 400px;
+  }
+}
+@media (min-width: 950px) {
   .padre {
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr;
@@ -84,9 +99,8 @@ button:hover {
     height: 400px;
   }
 }
-@media (min-width: 1023px) {
+@media (min-width: 1231px) {
   .padre {
-    margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "img1 img2 img3 img4" "img5 img6 ";
   }
@@ -103,6 +117,7 @@ button:hover {
 }
 
 .compromisos {
+  padding-bottom: 50px;
   background-color: rgb(227, 227, 227);
   display: grid;
   grid-template-columns: 1fr;
@@ -220,14 +235,6 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   gap: 40px;
-  /*HACER DOS FILAS CON FLEX BOX
-          @media(min-width:768px) {
-
-
-          }
-
-
-  */
 }
 .OfertasImperdibles .imagenesOfertas .img:hover {
   -webkit-animation: ofertas 2s;
@@ -248,7 +255,6 @@ button:hover {
     flex-direction: row;
   }
 }
-
 #nuestras-colecciones {
   background-color: whitesmoke;
   color: white;
@@ -309,7 +315,10 @@ button:hover {
 .razon {
   font-size: 2em;
   padding-top: 150px;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
+}
+.razon p {
+  padding-top: 20px;
 }
 .razon .container {
   gap: 100px;
@@ -319,14 +328,14 @@ button:hover {
   justify-content: center;
   flex-direction: column;
 }
-@media (min-width: 1023px) {
+@media (min-width: 1200px) {
   .razon .container {
     flex-direction: row;
   }
 }
 .razon img {
-  width: auto;
-  height: 800px;
+  width: 600px;
+  height: 600px;
 }
 
 .medioAmbiente {
@@ -357,9 +366,106 @@ button:hover {
 }
 
 #video {
-  width: 100%;
+  display: grid;
+  width: 1fr;
   padding-top: 100px;
   padding-bottom: 50px;
+}
+
+.hero-quienes {
+  padding: 35px;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/para\ quienes\ somos.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.hero-quienes h1, .hero-quienes p {
+  color: white;
+}
+
+.hero-video {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/quieneds\ 2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 35px;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-video h1 {
+  color: white;
+}
+.hero-video p {
+  padding-bottom: 30px;
+  color: white;
+}
+
+.contratacion {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+}
+@media (min-width: 1023px) {
+  .contratacion {
+    flex-direction: row;
+  }
+}
+.contratacion .container {
+  padding-bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contratacion h1 {
+  margin-bottom: 35px;
+}
+.contratacion p {
+  max-width: 700px;
+}
+.contratacion .formulario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contratacion .formulario h2 {
+  font-weight: 400;
+}
+.contratacion .formulario input {
+  margin: 10px;
+}
+.contratacion .formulario option {
+  margin: 20px;
+}
+
+.container-quienes {
+  background-color: rgb(227, 227, 227);
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 35px;
+}
+
+p {
+  max-width: 700px;
 }
 
 * {

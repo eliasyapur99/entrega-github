@@ -60,54 +60,85 @@ button:hover{
 }
 
 .padre {
-    margin-top: 0.5em;
-    background-color: whitesmoke;
-    display: grid;
-    grid-template-areas:
-        "img1 img2"
-        "img3 img4"
-        "img5 img6";
+    
+   padding: 30px;
+   margin-top: 0.5em;
+   background-color: whitesmoke;
+   display: grid;
+   grid-template-areas:
+           "img1"
+           "img2"
+           "img3"
+           "img4"
+           "img5"
+           "img6";
 
-    img {
-        filter: brightness(80%);
-        padding: 5px;
-        width: 250px;
-        height: 300px;
-        margin-top: 15px;
+
+
+           img {
+                    
+            &:hover {
+                filter: brightness(60%);
+                        }
         
-    }
+              
+               filter: brightness(80%);
+               padding: 5px;
+               width: 250px;
+               height: 300px;
+               margin-top: 15px;
+               
+           }
+       
+           .texto-encima {
+                   color: rgb(255, 255, 255);
+                   position: absolute;
+                   top: 20%;
+                   left: 50%;
+                   transform: translate(-50%, -50%)
+               }
 
-    .texto-encima {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%)
-    }
 
-    @media(min-width:768px) {
-        margin: 0;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            "img1 img2 img3"
-            "img4 img5 img6";
-            
-            img{
-                width: 300px;
-                height: 400px;
-            }
-    }
 
-    @media(min-width:1023px) {
-        margin: 0;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "img1 img2 img3 img4"
-            "img5 img6 ";
+   @media(min-width:720px) {
+       margin: 0;
+       grid-template-columns: 1fr ;
+       grid-template-areas:
+       "img1 img2"
+       "img3 img4"
+       "img5 img6";
 
-            
-    }
+           
+           img{
+               width: 300px;
+               height: 400px;
+           }
+   }
+
+   @media(min-width:950px) {
+       margin: 0;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-template-areas:
+           "img1 img2 img3"
+           "img4 img5 img6";
+           
+           img{
+               width: 300px;
+               height: 400px;
+           }
+   }
+
+   @media(min-width:1231px) {
+       
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       grid-template-areas:
+           "img1 img2 img3 img4"
+           "img5 img6 ";
+
+           
+   }
 }
+
 
 .recomendados {
     padding: 50px 20px;
@@ -121,6 +152,7 @@ button:hover{
 }
 
 .compromisos {
+    padding-bottom: 50px ;
     background-color: $background-principal ;
     display: grid;
     grid-template-columns: 1fr;
@@ -293,14 +325,10 @@ button:hover{
             flex-direction: row;
             
         }       
-/*HACER DOS FILAS CON FLEX BOX
         @media(min-width:768px) {
             
           
         }
-
-
-*/
 
     }
 
@@ -398,10 +426,12 @@ button:hover{
 
 
 .razon{
-
+    p{
+        padding-top: 20px
+    }
     font-size:2em;
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 
 
     .container{
@@ -412,8 +442,8 @@ button:hover{
     justify-content: center;
     flex-direction: column;
 
-    @media(min-width:1023px) {
-
+    @media(min-width:1200px) {
+       
         flex-direction: row;
         
     }       
@@ -421,8 +451,8 @@ button:hover{
     }
 
     img{
-        width: auto;
-        height: 800px;
+        width: 600px;
+        height: 600px;
     }
 
 
@@ -471,7 +501,121 @@ url(../img/economiser-les-ressources.jpeg);
 
 
 #video{
-   width: 100%;
+    display: grid;
+   width: 1fr;
    padding-top: 100px;
    padding-bottom: 50px;
+}
+
+
+.hero-quienes{
+    padding: 35px;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background-image:linear-gradient(0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+    url(../img/para\ quienes\ somos.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    h1, p{
+        color: $color-fuente-secundaria;
+    }
+
+
+}
+
+.hero-video{
+    background-image:linear-gradient(0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+    url(../img/quieneds\ 2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 35px;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        color: $color-fuente-secundaria;
+    }
+    p{
+        padding-bottom: 30px;
+        color: $color-fuente-secundaria;
+    }
+    
+}
+
+.contratacion{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+   
+    @media(min-width:1023px) {
+
+        flex-direction:row;
+        
+    }   
+
+
+    .container{
+    padding-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    h1{
+        margin-bottom: 35px;
+    }
+    p{
+        max-width: 700px;
+    }
+
+    .formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+        h2{font-weight: 400;
+        }
+        input{
+             margin:10px
+         }
+        option{
+             margin: 20px;
+         }
+    }
+}
+
+
+.container-quienes{
+    background-color:$background-principal ;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+    h1{
+        margin-bottom: 35px;
+    }
+    p{
+        max-width: 700px;
+    
 }
