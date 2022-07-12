@@ -107,7 +107,9 @@ button:hover {
 }
 
 .recomendados {
+  max-width: 100%;
   padding: 50px 20px;
+  justify-content: center;
 }
 .recomendados h2 {
   display: flex;
@@ -117,6 +119,9 @@ button:hover {
 }
 
 .compromisos {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 50px;
   background-color: rgb(227, 227, 227);
   display: grid;
@@ -135,13 +140,14 @@ button:hover {
   padding-bottom: 25px;
 }
 .compromisos p {
+  max-width: 900px;
   margin-left: 2em;
   margin-right: 2em;
   padding-bottom: 50px;
 }
 .compromisos a {
-  text-align: center;
-  align-items: center;
+  margin-left: 2em;
+  margin-right: 2em;
   font-size: large;
   font-weight: bolder;
 }
@@ -160,13 +166,21 @@ button:hover {
   align-items: center;
   justify-content: center;
   height: 90vh;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/economiser-les-ressources.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/economiser-les-ressources.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 .hero-sostenible h1 {
   color: white;
+}
+
+#video {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+#video video {
+  width: 100%;
 }
 
 #texto-grande {
@@ -286,13 +300,13 @@ button:hover {
   font-size: large;
 }
 #nuestras-colecciones .carta:first-child {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/comedor.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/comedor.png);
 }
 #nuestras-colecciones .carta:nth-child(2) {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/dormitorio.jfif);
 }
 #nuestras-colecciones .carta:nth-child(3) {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/jardin.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/jardin.png);
 }
 
 .ventajas {
@@ -307,9 +321,6 @@ button:hover {
   list-style: none;
   font-weight: lighter;
   font-size: large;
-}
-.ventajas:hover {
-  transform: scale(1.5);
 }
 
 .razon {
@@ -334,15 +345,22 @@ button:hover {
   }
 }
 .razon img {
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
+}
+
+@media (min-width: 1200px) {
+  .carousel-inner img {
+    max-width: 600px;
+    max-height: 600px;
+  }
 }
 
 .medioAmbiente {
   height: 80vh;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/economiser-les-ressources.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/economiser-les-ressources.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -363,13 +381,6 @@ button:hover {
   margin-top: 40px;
   font-weight: lighter;
   font-size: large;
-}
-
-#video {
-  display: grid;
-  width: 1fr;
-  padding-top: 100px;
-  padding-bottom: 50px;
 }
 
 .hero-quienes {

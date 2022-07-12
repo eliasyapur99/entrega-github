@@ -141,8 +141,9 @@ button:hover{
 
 
 .recomendados {
+    max-width: 100%;
     padding: 50px 20px;
-
+    justify-content: center;
     h2 {
         display: flex;
         flex-direction: column;
@@ -152,6 +153,9 @@ button:hover{
 }
 
 .compromisos {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 50px ;
     background-color: $background-principal ;
     display: grid;
@@ -176,6 +180,7 @@ button:hover{
     }
 
     p {
+        max-width: 900px;
         margin-left: 2em;
         margin-right: 2em;
         padding-bottom: 50px;
@@ -183,8 +188,8 @@ button:hover{
     }
 
     a {
-        text-align: center;
-        align-items: center;
+        margin-left: 2em;
+        margin-right: 2em;
         font-size: large;
         font-weight: bolder;
     }
@@ -209,7 +214,7 @@ button:hover{
     background-image:linear-gradient(0deg,
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)),
-    url(../img/economiser-les-ressources.jpeg);
+    url(../img/economiser-les-ressources.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -217,6 +222,14 @@ button:hover{
     h1{
         color: $color-fuente-secundaria;
     }
+}
+
+#video{
+    video{
+        width: 100%;
+    }
+   padding-top: 100px;
+   padding-bottom: 50px;
 }
 
 #texto-grande{
@@ -379,7 +392,7 @@ button:hover{
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
         ),
-    url(../img/comedor.jpg);
+    url(../img/comedor.png);
     
     }
     
@@ -397,7 +410,7 @@ button:hover{
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
         ),
-    url(../img/jardin.jpg)
+    url(../img/jardin.png)
 
     }
 }
@@ -416,10 +429,6 @@ button:hover{
         font-weight: lighter;
         font-size:large;
       
-    }
-    &:hover{
-        transform:scale(1.5) ;
-
     }
     
 }
@@ -451,13 +460,24 @@ button:hover{
     }
 
     img{
-        width: 600px;
-        height: 600px;
+        width: 550px;
+        height: 550px;
     }
 
 
 }
 
+.carousel-inner{
+    @media(min-width:1200px) {
+     
+        img{
+        max-width: 600px;
+        max-height: 600px;
+        }
+        
+    }       
+        
+}
 
 
 .medioAmbiente {
@@ -470,7 +490,7 @@ button:hover{
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2)
     ),
-url(../img/economiser-les-ressources.jpeg);
+url(../img/economiser-les-ressources.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -500,12 +520,7 @@ url(../img/economiser-les-ressources.jpeg);
 }
 
 
-#video{
-    display: grid;
-   width: 1fr;
-   padding-top: 100px;
-   padding-bottom: 50px;
-}
+
 
 
 .hero-quienes{
