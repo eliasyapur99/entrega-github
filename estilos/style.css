@@ -30,6 +30,8 @@ footer {
   padding: 100px;
 }
 footer .logo-footer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -215,6 +217,7 @@ button:hover {
   padding-bottom: 50px;
 }
 #video video {
+  max-width: 100%;
   width: 100%;
 }
 
@@ -482,7 +485,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 100px;
+  padding: 50px;
 }
 @media (min-width: 1023px) {
   .contratacion {

@@ -25,6 +25,8 @@ footer{
     padding: 100px;
 
     .logo-footer{
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         h2{
@@ -267,6 +269,7 @@ button:hover{
 
 #video{
     video{
+        max-width: 100%;
         width: 100%;
     }
    padding-top: 100px;
@@ -638,12 +641,13 @@ url(../img/economiser-les-ressources.png);
 }
 
 .contratacion{
+   
     display: flex;
     background-color: white;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px;
+    padding: 50px;
    
     @media(min-width:1023px) {
 
