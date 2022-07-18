@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+:root {
+  --facebook: #3b5999;
+  --instagram: #e4405f;
+  --youtube: #c4302b;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -18,7 +24,36 @@ body {
 }
 
 footer {
+  color: white;
+  background-color: black;
+  text-align: center;
   padding: 100px;
+}
+footer .logo-footer {
+  justify-content: center;
+  align-items: center;
+}
+footer .logo-footer h2 {
+  font-size: small;
+  color: white;
+}
+footer .logo-footer p {
+  color: white;
+}
+footer .redes-container {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .redes-container ul, footer .redes-container button {
+  margin: 0 5px;
+  text-align: center;
+}
+footer .redes-container ul a, footer .redes-container button a {
+  padding: 0 10px;
+  color: #fff;
+  font-size: 18px;
 }
 
 button {
@@ -245,8 +280,8 @@ button:hover {
   text-align: center;
 }
 .OfertasImperdibles .imagenesOfertas {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: "img1" "img2" "img3" "img4";
   justify-content: center;
   gap: 40px;
 }
@@ -264,11 +299,19 @@ button:hover {
     transform: scale(1.5);
   }
 }
-@media (min-width: 1023px) {
+@media (min-width: 768px) {
   .OfertasImperdibles .imagenesOfertas {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img1" "img2" "img3" "img4";
   }
 }
+@media (min-width: 1380px) {
+  .OfertasImperdibles .imagenesOfertas {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "img1" "img2" "img3" "img4";
+  }
+}
+
 #nuestras-colecciones {
   background-color: whitesmoke;
   color: white;
@@ -321,6 +364,10 @@ button:hover {
   list-style: none;
   font-weight: lighter;
   font-size: large;
+  color: black;
+}
+.ventajas li i {
+  color: black;
 }
 
 .razon {
@@ -330,6 +377,10 @@ button:hover {
 }
 .razon p {
   padding-top: 20px;
+}
+.razon img {
+  width: 400px;
+  height: 400px;
 }
 .razon .container {
   gap: 100px;
@@ -344,13 +395,18 @@ button:hover {
     flex-direction: row;
   }
 }
-.razon img {
-  width: 550px;
-  height: 550px;
+@media (min-width: 550px) {
+  .razon .container img {
+    width: 550px;
+    height: 550px;
+  }
 }
 
 @media (min-width: 1200px) {
   .carousel-inner img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     max-width: 600px;
     max-height: 600px;
   }
@@ -477,6 +533,9 @@ h1 {
 
 p {
   max-width: 700px;
+}
+p .container {
+  background-color: rgb(227, 227, 227);
 }
 
 * {

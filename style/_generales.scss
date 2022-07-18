@@ -19,8 +19,48 @@ body {
 
 }
 footer{
+    color: white;
+    background-color: black;
+    text-align: center;
     padding: 100px;
+
+    .logo-footer{
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: small;
+            color: white;
+        }
+        p{
+           
+            color: white;
+        }
+
+    }
+    
+    
+    .redes-container{ 
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+            ul,button{
+                margin: 0 5px;
+                text-align: center;
+                
+                a{
+                    padding: 0 10px;
+                    color: #fff;
+                    font-size: 18px;
+
+                   
+                }
+
+            }
+
+    }
 }
+
 
 
 button{ 
@@ -137,6 +177,8 @@ button:hover{
 
            
    }
+
+   
 }
 
 
@@ -154,8 +196,7 @@ button:hover{
 
 .compromisos {
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;    align-items: center;
     padding-bottom: 50px ;
     background-color: $background-principal ;
     display: grid;
@@ -315,8 +356,12 @@ button:hover{
     }
 
     .imagenesOfertas{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-areas:
+                "img1"
+                "img2"
+                "img3"
+                "img4";
         justify-content: center;
         gap: 40px;
         
@@ -333,15 +378,22 @@ button:hover{
         
         }
 
-        @media(min-width:1023px) {
+        @media(min-width:768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+              "img1" "img2"
+              "img3" "img4";
+              
+            }
 
-            flex-direction: row;
+        @media(min-width:1380px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+              "img1" "img2" "img3" "img4";
+          
             
         }       
-        @media(min-width:768px) {
-            
-          
-        }
+        
 
     }
 
@@ -416,6 +468,7 @@ button:hover{
 }
 
 .ventajas{
+
     padding-top: 100px;
     transition: all 2s ease-in-out;
     text-align: center;
@@ -428,6 +481,10 @@ button:hover{
         list-style: none;
         font-weight: lighter;
         font-size:large;
+        color: black;
+        i{
+            color: black;
+        }
       
     }
     
@@ -441,6 +498,10 @@ button:hover{
     font-size:2em;
     padding-top: 150px;
     padding-bottom: 100px;
+    img{
+        width: 400px;
+        height: 400px;
+    }
 
 
     .container{
@@ -452,18 +513,20 @@ button:hover{
     flex-direction: column;
 
     @media(min-width:1200px) {
-       
         flex-direction: row;
+     
+    }       
+
+    @media(min-width:550px) {
+        img{
+            width: 550px;
+            height: 550px;
+        }
+        
         
     }       
 
     }
-
-    img{
-        width: 550px;
-        height: 550px;
-    }
-
 
 }
 
@@ -471,6 +534,10 @@ button:hover{
     @media(min-width:1200px) {
      
         img{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
         max-width: 600px;
         max-height: 600px;
         }
@@ -632,5 +699,10 @@ url(../img/economiser-les-ressources.png);
     }
     p{
         max-width: 700px;
+
+
+        .container{
+            background-color:$background-principal;
+        }
     
 }
